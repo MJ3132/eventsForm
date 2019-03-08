@@ -1,8 +1,9 @@
 {
-  "homepage": "https://MJ3132.github.io/eventsForm",
+
   "name": "startupfuel",
   "version": "0.1.0",
   "private": true,
+    "homepage": "https://mj3132.github.io/eventsForm",
   "dependencies": {
     "@date-io/date-fns": "^1.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
