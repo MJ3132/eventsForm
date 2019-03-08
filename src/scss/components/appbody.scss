@@ -1,0 +1,1152 @@
+@import "./../settings/colors.scss";
+@import "./../settings/fonts.scss";
+@import "./../settings/breakpoints.scss";
+
+.app-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    background: linear-gradient(45deg, #03a9f4, #2196f3, #673ab7);
+
+    .container {
+        width: 90%;
+        height: inherit;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+        .message-container {
+            display: flex;
+            justify-content: center;
+            height: 100px;
+
+            .message {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                text-align: center;
+                font-weight: bold;
+                align-self: center;
+                letter-spacing: 1px;
+                color: white;
+            }
+        }
+        
+        .cards-container {
+            display: flex;
+            height: 100%;
+            margin: 1%;
+
+            @media screen and (max-width: $md) {
+                flex-direction: column;
+            }
+            
+            .card-1-container {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                
+                .card-a {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5%;
+                    flex: 2;
+                    
+                    .avatar-container {
+                        display: flex;
+                        justify-content: center;
+                        margin : 10%;
+                        height: 40%;
+                        
+                        .avatar {
+                            align-self: center;
+                            font-size: 8vw;
+                        }
+                    }
+                    
+                    .company-name-container {
+                        display: flex;
+                        justify-content: center;
+
+                        .company-name {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-weight: bold;
+                            align-self: center;
+                            letter-spacing: 1px;
+                            margin: 5px;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+
+                    }
+
+                    .any-container {
+                        display: flex;
+                        height: 120px;
+                    }
+                }
+                
+                .card-b {
+                    margin-top: 3%;
+                    padding: 5%;
+
+                    .avatar-container {
+                        display: flex;
+                        justify-content: center;
+                        height: 50%;
+                        margin-top: 15%;
+                        
+                        .fire {
+                            align-self: center;
+                            width: 40%;
+                        }
+                    }
+
+                    .copy-right-container {
+                        display: flex;
+                        justify-content: center;
+
+                        .copy-right {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 10px;
+                            align-self: center;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            text-align: center;
+                        }
+                        
+                        .terms-service-message {
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: orange;
+
+                            span {
+                                color: grey;
+                            }
+                        }
+
+                    }
+                }
+            }
+            
+            .card-2-container {
+                flex: 2;
+                margin: 0 1%;
+                display: flex;
+                
+                .create-opportunity-card {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 3%;
+                    
+                    .create-opportunity-heading {
+                        display: flex;
+                        justify-content: center;
+                        flex: 1;
+                        
+                        .heading {
+                            align-self: center;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    
+                    .create-opportunity-message {
+                        display: flex;
+                        flex: 1;
+                        justify-content: center;
+                        
+                        .message {
+                            margin: 0;
+                            padding: 0;
+                            padding: 1%;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                            text-align: center;
+                            line-height: 18px;
+                        }
+                    }
+                    
+                    .create-opportunity-form-container {
+                        display: flex;
+                        flex: 10;
+                        flex-wrap: wrap;
+                        margin-top: 5%;
+                        overflow-y: scroll;
+                        
+                        .form-row-1, .form-row-2, .form-row-3, .form-row-4, .form-row-5, .form-row-6, .form-row-7{
+                            width: 100%;
+                            display: flex;
+                            
+                            .form {
+                                display: flex;
+                                width: 100%;
+                                
+                                .select-company-container, .opportunity-type-container, .website-url-container, .industry-container, .free-ticket-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1;
+                                    margin: 0 1%;
+
+                                    label {
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+
+                                    select {
+                                        padding: 3%;
+                                        outline: none;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+
+                                }
+
+                                .industry-container {
+                                    select {
+                                        padding: 1%;
+                                        margin-top: 1%;
+                                    }
+
+                                    .label-btn {
+                                        .btn {
+                                            background-color: seagreen;
+                                            color: white;
+                                            outline: none;
+                                            border:  none;
+                                            border-radius: 5px;
+                                            padding: 5px 15px;
+                                            text-transform: uppercase;
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 10px;
+                                            letter-spacing: 1px;
+                                            font-weight: bold;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .opportunity-name-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1;
+                                    width: 45%;
+                                    margin: 0 1%;
+                                    margin-top: 2%;
+
+                                    label {
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+
+                                    input {
+                                        padding: 2%;
+                                        outline: none;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                }
+
+                                .opportunity-description-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 2;
+                                    width: 100%;
+                                    margin: 0 1%;
+                                    margin-top: 2%;
+
+                                    label {
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    textarea {
+                                        resize: vertical;
+                                        outline: none;
+                                        padding: 2%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 12px;
+                                        max-height: 6em;
+                                        min-height: 6em;
+                                    }
+                                }
+
+                                .background-photo-container {
+                                    display: flex;
+                                    flex: 1;
+                                    margin: 0 1%;
+                                    margin-top:  2%;
+                                    
+                                    label {
+                                        flex: 1;
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    input {
+                                        flex: 2;
+                                        padding: 1%;
+                                        border: 1px solid darkgrey;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                }
+
+                                .website-url-container, .industry-container {
+                                    margin-top:  2%;
+
+                                    input {
+                                        padding: 2%;
+                                        outline: none;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                }
+
+                                .free-ticket-container {
+
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-top: 2%;
+
+                                    input {
+                                        flex: 1;
+                                        align-self: center;
+                                    }
+                                    
+                                    span {
+                                        flex: 18;
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .apply-btn-container {
+                            flex: 1;
+                            display: flex;
+                            margin-top: 3%;
+                            
+                            .btn-container {
+                                flex: 1;
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0 auto;
+                                padding: 1.5%;
+                                height: 40px;
+
+                                .apply-btn {
+                                    background-color: #004dcf;
+                                    color: white;
+                                    outline: none;
+                                    border:  none;
+                                    padding: 5px 30px;
+                                    text-transform: uppercase;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                    letter-spacing: 1px;
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+            .card-3-container {
+                flex: 2;
+                display: flex;
+
+                .profile-card {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .cover-image-container {
+                        position: relative;
+                        flex: 1;
+                        background-image: url("./../../assets/cover.jpg");
+                        opacity: 0.6;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        
+                        .profile-image-container {
+                            position: relative;
+                            top: 0em;
+                            border: 2px solid darkgray;
+                            width: 5em;
+                            height: 5em;
+                            border-radius: 50%;
+                            background-color: white;
+                            margin-left: 3%;
+                        }
+                    }
+                    
+                    .profile-data-container {
+                        flex: 2;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .company-name-container {
+                            flex: 1;
+
+                            .container {
+                                float: right;
+                                width: 75%;
+                                
+                                .company-name, .user-type {
+                                    margin: 0;
+                                    float: right;
+                                    padding: 1%;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                }
+                                
+                                .company-name {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                }
+    
+                            }
+                        }
+                        
+                        .opportunity-name-container {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .opportunity-name {
+                                flex: 1;
+                                margin: 0;
+                                text-align: center;
+                              
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
+                            
+                            .form-container {
+                                flex: 2;
+                                display: flex;
+                                
+                                .opportunity-form {
+                                    flex: 1;
+                                    display: flex;
+                                    
+                                    input {
+                                        flex: 1;
+                                        padding-left: 10px;
+                                        outline: none;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                    
+                                    .left-input, .right-input {
+                                        border-top: 2px solid $lightgrey;
+                                        border-bottom: 2px solid $lightgrey;
+                                        border-right: none;
+                                        border-left: none;
+                                    }
+                                    
+                                    .right-input {
+                                        border-left: 2px solid $lightgrey;
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                        .opportunity-description-container {
+                            flex: 2;
+                            padding-top: 1%;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .opportunity-description {
+                                flex: 1;
+                                margin: 0;
+                                padding: 1%;
+                                padding-left: 10%;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
+                            
+                            .form-container {
+                                margin: 0 auto;
+                                flex: 5;
+                                width: 80%;
+                                
+                                .textarea {
+                                    min-width: 100%;
+                                    max-width: 100%;
+                                    min-height: 9em;
+                                    max-height: 9em;
+                                    border: none;
+                                    outline: none;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                }
+                            }
+                            
+                        }
+                        
+                        .apply-btn-container {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .hash-tags-container {
+                                display: flex;
+                                flex: 1;
+                                justify-content: center;
+                                
+                                .hash-tags{
+                                    margin: 0;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
+                            }
+                            
+                            .btn-container {
+                                flex: 2;
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0 auto;
+                                padding: 1.5%;
+
+                                .apply-btn {
+                                    background-color: #004dcf;
+                                    color: white;
+                                    outline: none;
+                                    border:  none;
+                                    padding: 5px 30px;
+                                    text-transform: uppercase;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                    letter-spacing: 1px;
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Mobile****************************************************************************/
+
+@media screen and (max-width:990px) {
+    
+.app-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    background: linear-gradient(45deg, #03a9f4, #2196f3, #673ab7);
+
+    .container {
+        width: 100%;
+        height: inherit;
+        margin: 1% auto;
+        display: flex;
+        flex-direction: column;
+        
+        .message-container {
+            display: flex;
+            justify-content: center;
+            height: 100px;
+
+            .message {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                text-align: center;
+                font-weight: bold;
+                align-self: center;
+                letter-spacing: 1px;
+                color: white;
+            }
+        }
+        
+        .cards-container {
+            display: flex;
+            height: 100%;
+            margin: 1%;
+
+            
+            .card-1-container {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                
+                .card-a {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5%;
+                    flex: 2;
+                    margin:2%;
+                    
+                    .avatar-container {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 10%;
+                        height: 40%;
+                        
+                        .avatar {
+                            align-self: center;
+                            font-size: 8vw;
+                        }
+                    }
+                    
+                    .company-name-container {
+                        display: flex;
+                        justify-content: center;
+
+                        .company-name {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-weight: bold;
+                            align-self: center;
+                            letter-spacing: 1px;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+
+                    }
+
+                    .any-container {
+                        display: flex;
+                        height: 120px;
+                    }
+                }
+                
+                .card-b {
+                    display: none;
+
+                    .avatar-container {
+                        display: flex;
+                        justify-content: center;
+                        height: 50%;
+                        margin-top: 15%;
+                        
+                        .fire {
+                            align-self: center;
+                            width: 40%;
+                        }
+                    }
+
+                    .copy-right-container {
+                        display: flex;
+                        justify-content: center;
+
+                        .copy-right {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 10px;
+                            align-self: center;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            text-align: center;
+                        }
+                        
+                        .terms-service-message {
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: orange;
+
+                            span {
+                                color: grey;
+                            }
+                        }
+
+                    }
+                }
+            }
+            
+            .card-2-container {
+                flex: 2;
+                margin: 0 1%;
+                display: flex;
+                
+                .create-opportunity-card {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 3%;
+                    margin:2%;
+                    
+                    .create-opportunity-heading {
+                        display: flex;
+                        justify-content: center;
+                        flex: 1;
+                        
+                        .heading {
+                            align-self: center;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    
+                    .create-opportunity-message {
+                        display: flex;
+                        flex: 1;
+                        justify-content: center;
+                        
+                        .message {
+                            margin: 0;
+                            padding: 0;
+                            padding: 1%;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                            text-align: center;
+                            line-height: 18px;
+                        }
+                    }
+                    
+                    .create-opportunity-form-container {
+                        display: flex;
+                        flex: 10;
+                        flex-wrap: wrap;
+                        margin-top: 5%;
+                        overflow-y: auto;
+                        overflow: auto;
+                        
+                        .form-row-1, .form-row-2, .form-row-3, .form-row-4, .form-row-5, .form-row-6, .form-row-7{
+                            width: 100%;
+                            display: flex;
+                            
+                            .form {
+                                display: flex;
+                                width: 100%;
+                                
+                                .select-company-container, .opportunity-type-container, .website-url-container, .industry-container, .free-ticket-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1;
+                                    margin: 0 1%;
+
+                                    label {
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+
+                                    select {
+                                        padding: 3%;
+                                        outline: none;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+
+                                }
+
+                                .industry-container {
+                                    select {
+                                        padding: 1%;
+                                        margin-top: 1%;
+                                    }
+
+                                    .label-btn {
+                                        .btn {
+                                            background-color: seagreen;
+                                            color: white;
+                                            outline: none;
+                                            border:  none;
+                                            border-radius: 5px;
+                                            padding: 5px 15px;
+                                            text-transform: uppercase;
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 10px;
+                                            letter-spacing: 1px;
+                                            font-weight: bold;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .opportunity-name-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1;
+                                    width: 45%;
+                                    margin: 0 1%;
+                                    margin-top: 2%;
+
+                                    label {
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+
+                                    input {
+                                        padding: 2%;
+                                        outline: none;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                }
+
+                                .opportunity-description-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 2;
+                                    width: 100%;
+                                    margin: 0 1%;
+                                    margin-top: 2%;
+
+                                    label {
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    textarea {
+                                        resize: vertical;
+                                        outline: none;
+                                        padding: 2%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 12px;
+                                        max-height: 6em;
+                                        min-height: 6em;
+                                    }
+                                }
+
+                                .background-photo-container {
+                                    display: flex;
+                                    flex: 1;
+                                    margin: 0 1%;
+                                    margin-top:  2%;
+                                    
+                                    label {
+                                        flex: 1;
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    input {
+                                        flex: 2;
+                                        padding: 1%;
+                                        border: 1px solid darkgrey;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                }
+
+                                .website-url-container, .industry-container {
+                                    margin-top:  2%;
+
+                                    input {
+                                        padding: 2%;
+                                        outline: none;
+                                        font-size: 12px;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                }
+
+                                .free-ticket-container {
+
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-top: 2%;
+
+                                    input {
+                                        flex: 1;
+                                        align-self: center;
+                                    }
+                                    
+                                    span {
+                                        flex: 18;
+                                        padding: 1%;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .apply-btn-container {
+                            flex: 1;
+                            display: flex;
+                            margin-top: 3%;
+                            
+                            .btn-container {
+                                flex: 1;
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0 auto;
+                                padding: 1.5%;
+                                height: 40px;
+
+                                .apply-btn {
+                                    background-color: #004dcf;
+                                    color: white;
+                                    outline: none;
+                                    border:  none;
+                                    padding: 5px 30px;
+                                    text-transform: uppercase;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                    letter-spacing: 1px;
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+            .card-3-container {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                margin:2%;
+
+                .profile-card {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .cover-image-container {
+                        position: relative;
+                        flex: 1;
+                        background-image: url("./../../assets/cover.jpg");
+                        opacity: 0.6;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                          margin: 3%;
+                        
+                        .profile-image-container {
+                          position: relative;
+                            top: 0.80em;
+                            border: 2px solid darkgray;
+                            width: 7em;
+                            height: 7em;
+                            border-radius: 50%;
+                            background-color: white;
+                            margin: 3%;
+                        }
+                    }
+                    
+                    .profile-data-container {
+                        flex: 2;
+                        display: flex;
+                        flex-direction: column;
+                        margin:1%;
+                        
+                        .company-name-container {
+                            flex: 1;
+                             margin:1%;
+                           
+                            .container {
+                                
+                                float: right;
+                                width: 75%;
+                                
+                                
+                                .company-name, .user-type {
+                            
+                                    padding: 1%;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                }
+                                
+                                .company-name {
+                                    margin: 1% auto;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    text-transform: uppercase;
+
+                                }
+    
+                            }
+                        }
+                        
+                        .opportunity-name-container {
+                            flex: 1;
+                            margin: 2% auto;
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .opportunity-name {
+                                flex: 1;
+                                margin: 0;
+                                padding: 1%;
+                                padding-left: 10%;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
+                            
+                            .form-container {
+                                flex: 2;
+                                display: flex;
+                                
+                                .opportunity-form {
+                                    flex: 1;
+                                    display: flex;
+                                    
+                                    input {
+                                        flex: 1;
+                                        padding-left: 10px;
+                                        outline: none;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        font-family: 'Montserrat', sans-serif;
+                                    }
+                                    
+                                    .left-input, .right-input {
+                                        border-top: 2px solid $lightgrey;
+                                        border-bottom: 2px solid $lightgrey;
+                                        border-right: none;
+                                        border-left: none;
+                                    }
+                                    
+                                    .right-input {
+                                        border-left: 2px solid $lightgrey;
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                        .opportunity-description-container {
+                            flex: 2;
+                            padding-top: 1%;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .opportunity-description {
+                                flex: 1;
+                                margin: 0;
+                                padding: 1%;
+                                padding-left: 10%;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
+                            
+                            .form-container {
+                                margin: 0 auto;
+                                flex: 5;
+                                width: 80%;
+                                
+                                .textarea {
+                                    min-width: 100%;
+                                    max-width: 100%;
+                                    min-height: 9em;
+                                    max-height: 9em;
+                                    border: none;
+                                    outline: none;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                }
+                            }
+                            
+                        }
+                        
+                        .apply-btn-container {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            .hash-tags-container {
+                                display: flex;
+                                flex: 1;
+                                justify-content: center;
+                                
+                                .hash-tags{
+                                    margin: 0;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
+                            }
+                            
+                            .btn-container {
+                                flex: 2;
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0 auto;
+                                padding: 1.5%;
+
+                                .apply-btn {
+                                    background-color: #004dcf;
+                                    color: white;
+                                    outline: none;
+                                    border:  none;
+                                    padding: 5px 30px;
+                                    text-transform: uppercase;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 12px;
+                                    letter-spacing: 1px;
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+}

@@ -1,0 +1,24 @@
+// @import "./../settings/breakpoints.scss";
+
+// @media screen and (min-width: $sm) {
+
+// }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+
+@media screen and (max-width:990px) {
+
+.App {
+  
+    height: 100%;
+}
+
+
+
+}
